@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+/* Header Social Media Icons */
+.navbar .social-icons {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .navbar .social-icons a {
+            color: #0056b3; /* Initial icon color */
+            margin-left: 15px;
+            font-size: 18px; /* Icon size */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .social-icons a:hover {
+            color: #2d70b3; /* Darker shade on hover */
+        }
+
+        /* Scrolled Navbar Social Icon Color Change */
+        .scrolled-navbar .social-icons a {
+            color: #FFFFFF; /* White color for contrast against the dark background */
+        }
+        .scrolled-navbar .nav-link {
+            color: white !important; /* Change link color to white */
+        }
+
+        /* Ensure smooth color transition */
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        /* Dynamic Navbar Style */
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+            transition: 0.3s;
+        }
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+         .navbar-brand img {
+            height: 30px; /* Larger logo for better visibility */
+            /* width: 90px; */
+            width: auto;
+            transition: transform 0.3s ease;
+            transform: scale(3.14);
+        } 
+
+        .navbar-brand:hover img {
+            transform: scale(1.15); /* Slight zoom on hover for a dynamic effect */
+        }
+        .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .resource-section {
+            padding: 60px 0;
+        }
+        .resource-item {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .resource-title {
+            font-size: 20px;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        /* Revised Footer Styles */
+.footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer .social-icons a {
+    margin: 0 10px; /* Adjusts spacing between icons */
+    display: inline-block; /* Ensures links are inline */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.footer .social-icons a i {
+    font-size: 24px; /* Adjusts the size of the icons */
+}
+
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease-in-out;
+    display: block; /* Each link on its own line */
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: #257bad; /* Light blue for a gentle hover effect */
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div>
+                <img src="images/logo.png" alt="KFUPM Consulting Club Logo" class=".navbrand-brand">
+            </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Partner With Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resources Section -->
+    <section class="resource-section">
+        <div class="container">
+            <h1 class="section-heading">Resources</h1>
+            <div class="resource-item">
+                <h2 class="resource-title">Consulting Frameworks</h2>
+                <p>A collection of essential frameworks used in consulting to solve business problems efficiently.</p>
+                <!-- Link to resource -->
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="resource-item">
+                <h2 class="resource-title">Case Studies</h2>
+                <p>Explore real-world consulting case studies to understand the application of theories and frameworks.</p>
+                <!-- Link to resource -->
+                <a href="#" class="btn btn-primary">Discover</a>
+            </div>
+            <!-- Additional resources -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Connect with us on social media</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
+            <p class="small"><em>Empowering students for a brighter consulting future.</em></p>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6c4f8b384.js" crossorigin="anonymous"></script>
+
+        <!-- Dynamic Navbar Script -->
+        <script>
+            window.onscroll = function() {makeNavbarDynamic()};
+    
+            function makeNavbarDynamic() {
+                var navbar = document.querySelector('.navbar');
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    navbar.classList.add('navbar-dynamic');
+                } else {
+                    navbar.classList.remove('navbar-dynamic');
+                }
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        document.querySelector('.navbar').classList.add('scrolled-navbar');
+                    } else {
+                        document.querySelector('.navbar').classList.remove('scrolled-navbar');
+                    }   
+                });
+            });
+            </script>
+</body>
+</html>

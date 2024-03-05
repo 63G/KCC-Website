@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Rework the header section  */
+        /* Existing CSS */
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+/* Header Social Media Icons */
+        .navbar .social-icons {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .navbar .social-icons a {
+            color: #0056b3; /* Initial icon color */
+            margin-left: 15px;
+            font-size: 18px; /* Icon size */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .social-icons a:hover {
+            color: #2d70b3; /* Darker shade on hover */
+        }
+
+        /* Scrolled Navbar Social Icon Color Change */
+        .scrolled-navbar .social-icons a {
+            color: #FFFFFF; /* White color for contrast against the dark background */
+        }
+        .scrolled-navbar .nav-link {
+            color: white !important; /* Change link color to white */
+        }
+
+        /* Ensure smooth color transition */
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        /* Dynamic Navbar Style */
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+            transition: 0.3s;
+        }
+
+        /* Additional Sections */
+        .about-section, .events-section, .contact-section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+         .navbar-brand img {
+            height: 30px; /* Larger logo for better visibility */
+            /* width: 90px; */
+            width: auto;
+            transition: transform 0.3s ease;
+            transform: scale(3.14);
+        } 
+
+        .navbar-brand:hover img {
+            transform: scale(1.15); /* Slight zoom on hover for a dynamic effect */
+        }
+
+        /* ^ above is the nav bar */
+
+
+
+
+        .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        
+
+        .hero-section {
+            background-image: url('images/campus.jpg'); /* The URL or relative path to your image */
+            background-size: cover; /* Cover ensures the image covers the entire section */
+            background-repeat: no-repeat;
+            background-position: center; /* Centers the background image */
+
+            color: #fff; /* Change the text color to white or any color that contrasts well with your background image */
+            padding: 100px 0; /* Adjust the padding to ensure there's enough space for your content */
+            text-align: center; /* Center the text */
+}
+
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            color: #003366;
+        }
+
+        .hero-section p {
+            color: #5a5a5a;
+        }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:hover {
+            background-color: #003366;
+            border-color: #003366;
+        }
+
+        .about-us-section {
+            position: relative;
+            color: #fff; /* Ensure text is readable on varying backgrounds */
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .background-gallery {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Smooth transition is now handled by jQuery fadeIn/fadeOut */
+        }
+
+        .about-us-content {
+            position: relative;
+            z-index: 2; /* Ensures content is above the background images */
+            color: #fff; /* Adjust text color for readability */
+            text-shadow: 0px 0px 8px rgba(0,0,0,0.7); /* Text shadow to improve readability over varied backgrounds */
+        }
+
+        .about-us-section {
+            position: relative;
+            overflow: hidden;
+            padding: 5rem 0; /* Increase padding to ensure visibility and focus */
+        }
+
+        /* Optionally, add a semi-transparent overlay behind text for improved readability */
+        .about-us-content:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay; adjust opacity as needed */
+            z-index: -1;
+            border-radius: 15px; /* Optional: adds rounded corners to the overlay */
+        }
+
+
+        .about-us-content {
+            position: relative;
+            z-index: 2; /* Ensures content is above the slideshow */
+        }
+
+        .card {
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body {
+            padding: 15px;
+            padding-bottom: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            line-height: 1.5;
+        }
+
+        .news-events-section .news-item {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .news-events-section .news-item-link {
+            text-decoration: none;
+            color: inherit; /* Ensure text color is inherited for the link */
+        }
+
+        .news-events-section .news-title {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+            padding: 10px;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: background 0.3s ease;
+        }
+
+        .news-events-section .news-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            background: rgba(0, 0, 0, 0.7); /* Dark background for text */
+            padding: 20px;
+        }
+        
+        .contact-section {
+    background-color: #FFFFFF; /* Or any light, neutral color that fits your design */
+    color: #333;
+}
+
+    .section-heading {
+        margin-bottom: 1rem;
+        color: #0056b3; /* A pop of color for the heading */
+    }
+
+    .contact-section p {
+        margin-bottom: 2rem;
+    }
+
+    .btn-outline-primary {
+        border-color: #0056b3;
+        color: #0056b3;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #0056b3;
+        color: #FFFFFF;
+    }
+
+    .social-links a {
+        font-size: 24px; /* Adjust based on preference */
+        color: #0056b3; /* Matching the primary color theme */
+        margin: 0 10px;
+    }
+
+    .social-links a:hover {
+        color: #003366; /* A darker shade for hover effect */
+    }
+
+
+        .news-item:hover .news-details {
+            transform: translateY(0);
+        }
+
+        .news-item:hover .news-title {
+            background: rgba(0, 0, 0, 0); /* Make title background fully transparent on hover */
+        }
+
+
+
+
+/* Revised Footer Styles */
+.footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer .social-icons a {
+    margin: 0 10px; /* Adjusts spacing between icons */
+    display: inline-block; /* Ensures links are inline */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.footer .social-icons a i {
+    font-size: 24px; /* Adjusts the size of the icons */
+}
+
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease-in-out;
+    display: block; /* Each link on its own line */
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: #257bad; /* Light blue for a gentle hover effect */
+    text-decoration: none;
+}
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div>
+                <img src="images/logo.png" alt="KFUPM Consulting Club Logo" class=".navbrand-brand">
+            </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Partner With Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1>Welcome to KFUPM Consulting Club</h1>
+            <p>Empowering the next generation of leaders in the consulting field.</p>
+            <a href="membership.html" class="btn btn-primary">Join Us Today</a>
+        </div>
+    </header>
+
+    
+    <!-- About Us Section -->
+    <section class="about-us-section py-5">
+        <div class="container text-center">
+            <div class="about-us-content">
+                <h2 class="section-heading">Who We Are</h2>
+                <p>Empowering and inspiring the next generation of consultants through education, networking, and innovation.</p>
+                <a href="about.html" class="btn btn-primary mt-3">Learn More</a>
+            </div>
+        </div>
+        <div class="background-gallery">
+            <!-- Background images are set via CSS or JavaScript -->
+        </div>
+    </section>
+    
+    
+    <!-- Events Section -->
+    <section class="news-events-section py-5">
+        <div class="container">
+            <h2 class="section-heading">Latest News & Events</h2>
+            <div class="row">
+                <!-- Event Item 1 -->
+                <div class="col-md-4">
+                    <a href="events/index" class="news-item-link">
+                        <div class="news-item" style="background-image: url('images/fahd.jpg');">
+                            <h3 class="news-title">Annual Consulting Conference</h3>
+                            <div class="news-details">
+                                <p class="news-date">March 15, 2024</p>
+                                <p class="news-summary">Join us for our annual conference featuring industry leaders, breakout sessions, and networking opportunities.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Repeat for other events, changing class name, background image, and details accordingly -->
+                <!-- Only 3 at a time for style  -->
+                <div class="col-md-4">
+                    <a href="events/index" class="news-item-link">
+                        <div class="news-item" style="background-image: url('images/fahd.jpg');">
+                            <h3 class="news-title">Annual Consulting Conference</h3>
+                            <div class="news-details">
+                                <p class="news-date">March 15, 2024</p>
+                                <p class="news-summary">Join us for our annual conference featuring industry leaders, breakout sessions, and networking opportunities.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="events/index" class="news-item-link">
+                        <div class="news-item" style="background-image: url('images/fahd.jpg');">
+                            <h3 class="news-title">Annual Consulting Conference</h3>
+                            <div class="news-details">
+                                <p class="news-date">March 15, 2024</p>
+                                <p class="news-summary">Join us for our annual conference featuring industry leaders, breakout sessions, and networking opportunities.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <section class="contact-section">
+        <div class="container text-center py-5">
+            <h2 class="section-heading">Connect With Us</h2>
+            <p>Interested in collaborating or have a question? We're here to help. Drop us a line and let's make something great together.</p>
+            
+            <!-- Simple contact method -->
+            <div class="contact-method">
+                <a href="mailto:consultingclub@kfupm.edu.sa" class="btn btn-outline-primary">Email Us</a>
+            </div>
+    
+            <div class="social-links mt-4">
+                <!-- Optionally, include social media links for direct messaging -->
+                <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                
+                <!-- Add other social platforms as needed -->
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Connect with us on social media</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
+            <p class="small"><em>Empowering students for a brighter consulting future.</em></p>
+        </div>
+
+    </footer>
+
+    
+    <!-- Placeholder for Footer Content -->
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome Setup -->
+    <script src="https://kit.fontawesome.com/f6c4f8b384.js" crossorigin="anonymous"></script>
+    
+    <!-- Dynamic Navbar Script -->
+    <script>
+        window.onscroll = function() {makeNavbarDynamic()};
+
+        function makeNavbarDynamic() {
+            var navbar = document.querySelector('.navbar');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('navbar-dynamic');
+            } else {
+                navbar.classList.remove('navbar-dynamic');
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled-navbar');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled-navbar');
+                }   
+            });
+        });
+        </script>
+
+
+
+<!-- <script>
+    // JavaScript for changing navbar style on scroll
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled-navbar');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled-navbar');
+            }   
+        });
+    });
+    </script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var images = [
+                "images/gallery/image1.jpg",
+                "images/gallery/image2.jpg",
+                "images/gallery/image3.jpg",
+                "images/gallery/image4.jpg",
+                "images/gallery/image5.jpg",
+                "images/gallery/image6.jpg",
+                "images/gallery/image7.jpg",
+                "images/gallery/image8.jpg",
+                "images/gallery/image9.jpg"
+                // Add more images as needed
+            ];
+            
+            // Preload images
+            images.forEach(function(img){
+                new Image().src = img; 
+            });
+        
+            var currentIndex = 0;
+            function changeBackground() {
+                $('.background-gallery').fadeOut(700, function() {
+                    $(this).css('background-image', 'url(' + images[currentIndex] + ')').fadeIn(700);
+                });
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+        
+            setInterval(changeBackground, 3000); // Change image every 5000 milliseconds (5 seconds) for a smoother experience
+        });
+        </script>
+
+
+        
+        
+</body>
+
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Existing CSS */
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+/* Header Social Media Icons */
+.navbar .social-icons {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .navbar .social-icons a {
+            color: #0056b3; /* Initial icon color */
+            margin-left: 15px;
+            font-size: 18px; /* Icon size */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .social-icons a:hover {
+            color: #2d70b3; /* Darker shade on hover */
+        }
+
+        /* Scrolled Navbar Social Icon Color Change */
+        .scrolled-navbar .social-icons a {
+            color: #FFFFFF; /* White color for contrast against the dark background */
+        }
+        .scrolled-navbar .nav-link {
+            color: white !important; /* Change link color to white */
+        }
+
+        /* Ensure smooth color transition */
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        /* Dynamic Navbar Style */
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+            transition: 0.3s;
+        }
+
+        /* Additional Sections */
+        .about-section, .events-section, .contact-section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+         .navbar-brand img {
+            height: 30px; /* Larger logo for better visibility */
+            /* width: 90px; */
+            width: auto;
+            transition: transform 0.3s ease;
+            transform: scale(3.14);
+        } 
+
+        .navbar-brand:hover img {
+            transform: scale(3.24); /* Slight zoom on hover for a dynamic effect */
+        }
+
+        /* ^ above is the nav bar */
+
+
+        /* Above is the navbar */
+
+        /* Additional Sections */
+        .about-section, .events-section, .contact-section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        
+
+
+        .hero-section {
+            background: #ffffff;
+            padding: 40px 0;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            color: #003366;
+        }
+
+        .hero-section p {
+            color: #5a5a5a;
+        }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:hover {
+            background-color: #003366;
+            border-color: #003366;
+        }
+
+        .card {
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body {
+            padding: 15px;
+            padding-bottom: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            line-height: 1.5;
+        }
+
+/* Revised Footer Styles */
+.footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer .social-icons a {
+    margin: 0 10px; /* Adjusts spacing between icons */
+    display: inline-block; /* Ensures links are inline */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.footer .social-icons a i {
+    font-size: 24px; /* Adjusts the size of the icons */
+}
+
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease-in-out;
+    display: block; /* Each link on its own line */
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: #257bad; /* Light blue for a gentle hover effect */
+    text-decoration: none;
+}
+        /* Dynamic Navbar Style */
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+        }
+
+        /* Additional Sections */
+        .about-section, .events-section, .contact-section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Additional custom styles */
+/* Team Section Styles */
+        .team-section {
+            background-color: #f8f9fa; /* Light background for the team section */
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center team members */
+            gap: 30px; /* Space between team member profiles */
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align items in the center for a neat layout */
+            text-align: center; /* Center text for team member names and titles */
+            padding: 15px;
+            background: #ffffff; /* White background for each profile */
+            border-radius: 10px; /* Rounded corners for the profile cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px); /* Slight raise effect on hover */
+        }
+
+        .team-photo {
+            width: 100px; /* Fixed size for team photos */
+            height: 100px; /* Fixed size to maintain aspect ratio */
+            object-fit: cover; /* Ensure photos cover the space nicely */
+            margin-bottom: 15px; /* Space between photo and text */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .team-container {
+                justify-content: space-around; /* Adjust spacing on smaller screens */
+            }
+            .team-member {
+                flex: 0 0 45%; /* Adjust team member width on smaller screens */
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            list-style: none;
+        }
+        .timeline-date {
+        font-weight: bold;
+        font-size: small;
+        margin-bottom: 5px;
+        /* margin-right: 30px; */
+        /* left: 10px; */
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 2px;
+            background: #003366;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: ' ';
+            position: absolute;
+            left: 31px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #fff;
+            border: 4px solid #003366;
+        }
+        .timeline-content {
+            padding-left: 80px;
+        }
+        .timeline-content h3 {
+            margin-top: 0;
+        }
+        .summary {
+        font-weight: bold;
+        }
+
+        .detail {
+        visibility: hidden; /* Hide content initially */
+        opacity: 0; /* Make content transparent */
+        transition: visibility 0s, opacity 0.5s linear; /* Animate opacity, delay hiding visibility */
+        height: 0; /* Collapse space when not visible */
+        overflow: hidden; /* Prevent content from spilling out */
+        }
+
+        .detail.show {
+            visibility: visible; /* Make content visible */
+            opacity: 1; /* Fade in content */
+            height: auto; /* Allow content to expand to natural height */
+            transition-delay: 0s, 0s; /* Apply transitions immediately */
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div>
+                <img src="images/logo.png" alt="KFUPM Consulting Club Logo" class=".navbrand-brand">
+            </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Partner With Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Hero Section for About Us Page -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1>About KFUPM Consulting Club</h1>
+            <p>Dedicated to fostering excellence in the consulting field.</p>
+        </div>
+    </header>
+    
+    <!-- Introduction Section -->
+    <section class="about-intro-section py-5">
+        <div class="container">
+            <h2 class="section-heading">Our Mission</h2>
+            <p>We aim to empower KFUPM students by providing them with the knowledge, skills, and network necessary to excel in the consulting industry.</p>
+        </div>
+    </section>
+    
+<!-- Team Section -->
+    <section class="team-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading" data-aos="fade-up">Meet Our Team</h2>
+            <div class="row team-container">
+                <div class="col-md-4 col-sm-6 team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/fahd.jpg" alt="Team Member Name" class="team-photo img-fluid rounded-circle">
+                    <h5>John Doe</h5>
+                    <p>President</p>
+                </div>
+                <!-- Repeat for other team members, consider increasing data-aos-delay for each for staggered effect -->
+                <div class="col-md-4 col-sm-6 team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/fahd.jpg" alt="Team Member Name" class="team-photo img-fluid rounded-circle">
+                    <h5>John Doe</h5>
+                    <p>President</p>
+                </div>
+                <div class="col-md-4 col-sm-6 team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/fahd.jpg" alt="Team Member Name" class="team-photo img-fluid rounded-circle">
+                    <h5>John Doe</h5>
+                    <p>President</p>
+                </div>
+                <div class="col-md-4 col-sm-6 team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/fahd.jpg" alt="Team Member Name" class="team-photo img-fluid rounded-circle">
+                    <h5>John Doe</h5>
+                    <p>President</p>
+                <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- History Section -->
+    <section class="history-section py-5">
+        <div class="container">
+            <h2 class="section-heading">Our Journey</h2>
+            <ul class="timeline">
+                <!-- Example Event -->
+                <li class="timeline-item">
+                    <div class="timeline-container">
+                        <!-- Timeline Item -->
+                        <div class="timeline-item" onclick="toggleDetail('event1')">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2018</div>
+                            <div class="timeline-content">
+                                <h3>Club Founding</h3>
+                                <p class="summary">The club was founded to support aspiring consultants at KFUPM.</p>
+                                <p id="event1" class="detail" style="display:none;">Detail about the founding, initial members, and first major activities.</p>
+                            </div>
+                        </div>
+                        <!-- Add more timeline items here -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+                    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Connect with us on social media</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
+            <p class="small"><em>Empowering students for a brighter consulting future.</em></p>
+        </div>
+
+    </footer>
+
+    
+    <!-- Placeholder for Footer Content -->
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6c4f8b384.js" crossorigin="anonymous"></script>
+    <!-- Dynamic Navbar Script -->
+    <script>
+        window.onscroll = function() {makeNavbarDynamic()};
+
+        function makeNavbarDynamic() {
+            var navbar = document.querySelector('.navbar');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('navbar-dynamic');
+            } else {
+                navbar.classList.remove('navbar-dynamic');
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled-navbar');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled-navbar');
+                }   
+            });
+        });
+        </script>
+    <script>
+        function toggleDetail(detailId) {
+            var detailElement = document.getElementById(detailId);
+            detailElement.classList.toggle('show');
+
+            // Adjust this to check if the class 'show' is present and toggle height
+            if (detailElement.classList.contains('show')) {
+                detailElement.style.height = detailElement.scrollHeight + "px";
+            } else {
+                detailElement.style.height = "0";
+            }
+    }        
+        </script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: 'ease-in-out', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+    });
+</script>
+
+        
+        
+</body>
+
+</html>
+    
+        

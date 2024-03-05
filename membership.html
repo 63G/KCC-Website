@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <!-- <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+/* Header Social Media Icons */
+.navbar .social-icons {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .navbar .social-icons a {
+            color: #0056b3; /* Initial icon color */
+            margin-left: 15px;
+            font-size: 18px; /* Icon size */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .social-icons a:hover {
+            color: #2d70b3; /* Darker shade on hover */
+        }
+
+        /* Scrolled Navbar Social Icon Color Change */
+        .scrolled-navbar .social-icons a {
+            color: #FFFFFF; /* White color for contrast against the dark background */
+        }
+        .scrolled-navbar .nav-link {
+            color: white !important; /* Change link color to white */
+        }
+
+        /* Ensure smooth color transition */
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        /* Dynamic Navbar Style */
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+            transition: 0.3s;
+        }
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+         .navbar-brand img {
+            height: 30px; /* Larger logo for better visibility */
+            /* width: 90px; */
+            width: auto;
+            transition: transform 0.3s ease;
+            transform: scale(3.14);
+        } 
+
+        .navbar-brand:hover img {
+            transform: scale(1.15); /* Slight zoom on hover for a dynamic effect */
+        }
+        .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+
+
+
+
+
+        .membership-section, .benefits-section, .form-section {
+            padding: 60px 0;
+        }
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .form-section form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .form-section .form-control {
+            border-radius: 20px;
+        }
+        .form-section .btn-primary {
+            border-radius: 20px;
+            padding: 10px 24px;
+            font-size: 18px;
+        }
+        .membership-requirements-section .list-unstyled li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .membership-requirements-section .list-unstyled i {
+            margin-right: 10px;
+        }
+
+        .membership-requirements-section .btn-primary {
+            border-radius: 20px;
+            padding: 10px 24px;
+            font-size: 18px;
+        }
+
+
+
+        /* Revised Footer Styles */
+.footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer .social-icons a {
+    margin: 0 10px; /* Adjusts spacing between icons */
+    display: inline-block; /* Ensures links are inline */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.footer .social-icons a i {
+    font-size: 24px; /* Adjusts the size of the icons */
+}
+
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease-in-out;
+    display: block; /* Each link on its own line */
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: #257bad; /* Light blue for a gentle hover effect */
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div>
+                <img src="images/logo.png" alt="KFUPM Consulting Club Logo" class=".navbrand-brand">
+            </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Partner With Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Membership Section -->
+    <section class="membership-section text-center">
+        <div class="container">
+            <h1 class="section-heading">Join the KFUPM Consulting Club</h1>
+            <p>Become a part of our community and unlock the door to exclusive resources, networking opportunities, and professional development workshops designed to propel your career in consulting.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section text-center bg-light">
+        <div class="container">
+            <h2 class="section-heading">Membership Benefits</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3>Networking</h3>
+                    <p>Connect with industry professionals and peers through our events and online forums.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3>Workshops</h3>
+                    <p>Participate in workshops led by consulting experts to refine your skills and knowledge.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3>Resources</h3>
+                    <p>Gain access to exclusive case studies, research materials, and consulting tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Membership Requirements Section -->
+    <section class="membership-requirements-section text-center bg-light py-5">
+        <div class="container">
+            <h2 class="section-heading">Membership Requirements</h2>
+            <p class="lead">Joining the KFUPM Consulting Club is open to all who are passionate about consulting and professional development. However, we have a few requirements to ensure that our community remains as impactful and dedicated as possible.</p>
+            <ul class="list-unstyled mt-4">
+                <li><i class="fas fa-check-circle text-success"></i> Currently enrolled at KFUPM or an alumni</li>
+                <li><i class="fas fa-check-circle text-success"></i> Commitment to participate in club events and activities</li>
+                <li><i class="fas fa-check-circle text-success"></i> Interest in pursuing a career in consulting or related fields</li>
+                <li><i class="fas fa-check-circle text-success"></i> Submission of a completed application form</li>
+                <li><i class="fas fa-check-circle text-success"></i> Agreement to abide by the club's code of conduct and ethics</li>
+            </ul>
+            <p class="mt-4">If you meet these requirements and are excited about contributing to and benefiting from the club, we encourage you to apply.</p>
+            <a href="#membershipForm" class="btn btn-primary">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- NOT NEEDED -->
+    <!-- Membership Form Section -->
+    <!-- <section class="form-section text-center">
+        <div class="container">
+            <h2 class="section-heading">Sign Up Today</h2>
+            <form action="submit-membership-form.php" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="membershipType">
+                        <option value="student">Student Membership</option>
+                        <option value="professional">Professional Membership</option>
+                        <option value="alumni">Alumni Membership</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </section> -->
+
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Connect with us on social media</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
+            <p class="small"><em>Empowering students for a brighter consulting future.</em></p>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6c4f8b384.js" crossorigin="anonymous"></script>
+
+        <!-- Dynamic Navbar Script -->
+        <script>
+            window.onscroll = function() {makeNavbarDynamic()};
+    
+            function makeNavbarDynamic() {
+                var navbar = document.querySelector('.navbar');
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    navbar.classList.add('navbar-dynamic');
+                } else {
+                    navbar.classList.remove('navbar-dynamic');
+                }
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        document.querySelector('.navbar').classList.add('scrolled-navbar');
+                    } else {
+                        document.querySelector('.navbar').classList.remove('scrolled-navbar');
+                    }   
+                });
+            });
+            </script>
+</body>
+</html>

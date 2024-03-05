@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        .nav-item .nav-link {
+            color: #003366;
+            font-weight: 500;
+        }
+
+        .hero-section {
+            background: #ffffff;
+            padding: 40px 0;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            color: #003366;
+        }
+
+        .hero-section p {
+            color: #5a5a5a;
+        }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:hover {
+            background-color: #003366;
+            border-color: #003366;
+        }
+
+        .card {
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body {
+            padding: 15px;
+            padding-bottom: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            color: #f8f9fa;
+        }
+
+        .navbar-dynamic {
+            background-color: #003366 !important; /* Change color on scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Add shadow for depth */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <img src="images/logo.jpg" alt="KFUPM Consulting Club Logo" style="height: 40px; margin-right: 10px; padding-bottom: 10px;">
+            <a class="navbar-brand" href="#">KFUPM Consulting Club</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <!-- Other nav-items -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1>Welcome to KFUPM Consulting Club</h1>
+            <p>Empowering the next generation of leaders in the consulting field.</p>
+            <a href="#" class="btn btn-primary">Join Us Today</a>
+        </div>
+    </header>
+
+    <!-- Latest News/Events -->
+    <!-- ... -->
+
+    <!-- Quick Links -->
+    <!-- ... -->
+
+    <!-- Footer -->
+    <!-- ... -->
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <!-- ... -->
+</body>
+<script>
+    window.onscroll = function() {makeNavbarDynamic()};
+
+    function makeNavbarDynamic() {
+        var navbar = document.querySelector('.navbar');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.classList.add('navbar-dynamic');
+        } else {
+            navbar.classList.remove('navbar-dynamic');
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - KFUPM Consulting Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #5a5a5a;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .navbar-brand img {
+            height: 40px; /* Match the logo size with the index.html */
+            width: auto;
+        }
+        .navbar, .navbar-dynamic {
+            transition: all 0.3s;
+            background-color: #003366 !important; /* Consistent navbar color */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+        }
+        .navbar .nav-link, .footer a {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .navbar .nav-link:hover, .footer a:hover {
+            color: #f8f9fa !important;
+        }
+        .section-heading {
+            color: #003366;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .about-section, .mission-section, .team-section {
+            padding: 60px 0;
+
+
+            /* Additional Custom CSS */
+        .parallax {
+            background-image: url('path/to/your/hero-image.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(79, 79, 79, 0.5);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(132, 132, 132, 0.5); /* Adjust the opacity as needed */
+            z-index: 1;
+        }
+
+        /* Ensure .about-us-content is on top of the overlay */
+        .about-us-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        }
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-dynamic">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="KFUPM Consulting Club Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <!-- About Section with Parallax Background -->
+    <section class="about-section text-center parallax">
+        <div class="overlay"></div> <!-- Semi-transparent overlay for better text readability -->
+        <div class="container">
+            <div class="about-us-content">
+                <h1 class="section-heading text-shadow">About Us</h1>
+                <p class="text-shadow">We are a vibrant community at KFUPM dedicated to fostering excellence in consulting. Our club offers members opportunities to develop their skills, network with professionals, and gain insights into the consulting industry.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mission, Vision, and Values -->
+    <section class="mission-section text-center">
+        <div class="container">
+            <h2 class="section-heading">Our Mission, Vision, and Values</h2>
+            <p><strong>Mission:</strong> To empower students by providing them with the skills, knowledge, and network needed to succeed in the consulting industry.</p>
+            <p><strong>Vision:</strong> To be the leading student consulting club recognized for shaping the future leaders of the consulting world.</p>
+            <p><strong>Values:</strong> Excellence, Integrity, Innovation, Collaboration, and Leadership.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section text-center">
+        <div class="container">
+            <h2 class="section-heading">Meet Our Team</h2>
+            <p>Our team consists of passionate students and faculty advisors dedicated to the success of our members and the club.</p>
+            <!-- Add team member profiles here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Connect with us on social media</p>
+            <a href="#" class="mx-2">Facebook</a> |
+            <a href="#" class="mx-2">Twitter</a> |
+            <a href="#" class="mx-2">LinkedIn</a>
+            <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        </script>
+        
+</body>
+
+</html>
