@@ -63,6 +63,7 @@
             text-align: center;
         }
         
+        
          .navbar-brand img {
             height: 30px; /* Larger logo for better visibility */
             /* width: 90px; */
@@ -72,7 +73,7 @@
         } 
 
         .navbar-brand:hover img {
-            transform: scale(1.15); /* Slight zoom on hover for a dynamic effect */
+            transform: scale(3.35); /* Slight zoom on hover for a dynamic effect */
         }
         .parallax {
         background-attachment: fixed;
@@ -81,13 +82,28 @@
         background-size: cover;
         }
 
-
-
-
-
-
-        .membership-section, .benefits-section, .form-section {
+        .benefits-section, .form-section {
             padding: 60px 0;
+            background-color: #003366;
+            color: #ffffff;
+        }
+        
+        .benefit {
+            display:inline;
+            flex-direction: row;
+            align-items: center; /* Align items in the center for a neat layout */
+            text-align: center; /* Center text for team member names and titles */
+            padding: 15px;
+            margin-bottom: 60px;
+            background: #ffffff; /* White background for each profile */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+            color: #003366;
+        }
+    
+        .membership-section {
+            box-shadow: inset;
+            padding: 100px 0; /* Adjust the padding to ensure there's enough space for your content */
         }
         .section-heading {
             color: #003366;
@@ -122,6 +138,16 @@
             padding: 10px 24px;
             font-size: 18px;
         }
+
+        .image-only-section {
+            background-image: url('images/KhobarTower.jpg'); /* The URL or relative path to your image */
+            background-size: cover; /* Cover ensures the image covers the entire section */
+            background-repeat: no-repeat;
+            background-position: center; /* Centers the background image */
+            height: 500px; /* Set a height for your image section. Adjust as needed. */
+            width: 100%; /* Ensure the section stretches across the full width */
+        }
+
 
 
 
@@ -183,9 +209,6 @@
                         <a class="nav-link" href="membership.html">Membership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="resources.html">Resources</a>
                     </li>
                     <li class="nav-item">
@@ -195,14 +218,14 @@
             </div>
             <div class="social-icons">
                 <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/company/kconsultingclub/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </nav>
 
-
+    <div class="image-only-section"></div>
     <!-- Membership Section -->
-    <section class="membership-section text-center">
+    <section class="membership-section text-center" >
         <div class="container">
             <h1 class="section-heading">Join the KFUPM Consulting Club</h1>
             <p>Become a part of our community and unlock the door to exclusive resources, networking opportunities, and professional development workshops designed to propel your career in consulting.</p>
@@ -211,18 +234,18 @@
 
     <!-- Benefits Section -->
     <section class="benefits-section text-center bg-light">
-        <div class="container">
+        <div class="benefits-section">
             <h2 class="section-heading">Membership Benefits</h2>
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 col-sm-6 benefit">
                     <h3>Networking</h3>
                     <p>Connect with industry professionals and peers through our events and online forums.</p>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 col-sm-6 benefit">
                     <h3>Workshops</h3>
                     <p>Participate in workshops led by consulting experts to refine your skills and knowledge.</p>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 col-sm-6 benefit">
                     <h3>Resources</h3>
                     <p>Gain access to exclusive case studies, research materials, and consulting tools.</p>
                 </div>
@@ -276,7 +299,7 @@
             <p>Connect with us on social media</p>
             <div class="social-icons">
                 <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/company/kconsultingclub/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="mt-2">&copy; 2024 KFUPM Consulting Club. All Rights Reserved.</p>
             <p class="small"><em>Empowering students for a brighter consulting future.</em></p>
